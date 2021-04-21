@@ -75,7 +75,17 @@ make install
 
 Check their [repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
 
-### Step 2: Build the plugin
+### Step 2: Build OpenSearch
+
+```sh
+git clone https://github.com/opensearch-project/OpenSearch.git
+cd OpenSearch
+./gradlew publishToMavenLocal
+```
+Refer the documentation for more details: https://github.com/opensearch-project/opensearch-plugins  
+NOTE: Once OpenSearch is published to public repositories, this step will not be needed.
+
+### Step 3: Build the plugin
 
 Clone the plugin’s source code:
 
@@ -99,7 +109,7 @@ cd opensearch-analysis-vietnamese
 mvn package
 ```
 
-### Step 3: Installation the plugin on OpenSearch
+### Step 4: Installation the plugin on OpenSearch
 
 ```sh
 bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-7.10.3-SNAPSHOT.zip

@@ -34,13 +34,6 @@
         <opensearch.version>${version}</opensearch.version>
         <log4j.version>2.14.1</log4j.version>
     </properties>
-    <repositories>
-     <repository>
-         <id>opensearch-repo-bucket-snapshot</id>
-         <name>OpenSearch repo</name>
-         <url>s3://search-vemsarat/</url>
-     </repository>
- </repositories>
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -73,13 +66,6 @@
         </dependency>
     </dependencies>
     <build>
-      <extensions>
-           <extension>
-               <groupId>com.github.platform-team</groupId>
-               <artifactId>aws-maven</artifactId>
-               <version>6.0.0</version>
-           </extension>
-       </extensions>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
