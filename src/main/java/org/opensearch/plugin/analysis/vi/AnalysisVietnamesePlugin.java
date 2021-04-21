@@ -12,14 +12,14 @@
  * the License.
  */
 
-package org.elasticsearch.plugin.analysis.vi;
+package org.opensearch.plugin.analysis.vi;
 
 
 import org.apache.lucene.analysis.Analyzer;
-import org.elasticsearch.index.analysis.*;
-import org.elasticsearch.indices.analysis.AnalysisModule;
-import org.elasticsearch.plugins.AnalysisPlugin;
-import org.elasticsearch.plugins.Plugin;
+import org.opensearch.index.analysis.*;
+import org.opensearch.indices.analysis.AnalysisModule;
+import org.opensearch.plugins.AnalysisPlugin;
+import org.opensearch.plugins.Plugin;
 
 import java.util.Map;
 

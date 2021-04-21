@@ -1,6 +1,6 @@
-package org.elasticsearch.analysis;
+package org.opensearch.analysis;
 
-import org.elasticsearch.common.settings.Settings;
+import org.opensearch.common.settings.Settings;
 
 public class VietnameseConfig {
     public static final String DEFAULT_DICT_PATH = "/usr/local/share/tokenizer/dicts";

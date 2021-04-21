@@ -14,8 +14,7 @@
 
 package org.apache.lucene.analysis.vi;
 
-import org.apache.lucene.analysis.*;
-import org.elasticsearch.analysis.VietnameseConfig;
+import org.opensearch.analysis.VietnameseConfig;
 
 import java.io.IOException;
 
