@@ -10,7 +10,7 @@ import org.opensearch.cluster.metadata.IndexMetadata;
 import org.opensearch.common.settings.Settings;
 import org.opensearch.env.Environment;
 import org.opensearch.plugin.analysis.vi.AnalysisVietnamesePlugin;
-import org.opensearch.test.ESTestCase;
+import org.opensearch.test.OpenSearchTestCase;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -22,7 +22,7 @@ import static org.hamcrest.Matchers.instanceOf;
 /**
  * Created by duydo on 2/19/17.
  */
-public class VietnameseAnalysisTests extends ESTestCase {
+public class VietnameseAnalysisTests extends OpenSearchTestCase {
 
     public void testVietnameseAnalysis() throws IOException {
         TestAnalysis analysis = createTestAnalysis(Settings.EMPTY);

@@ -73,7 +73,7 @@ cmake -DBUILD_JAVA=1 ..
 make install
 ```
 
-Check their [repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
+Refer [the repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
 
 ### Step 2: Build OpenSearch
 
@@ -99,7 +99,7 @@ Edit the `opensearch-analysis-vietnamese/pom.xml` to change the version of OpenS
 ...
 <groupId>org.opensearch</groupId>
 <artifactId>opensearch-analysis-vietnamese</artifactId>
-<version>7.10.3-SNAPSHOT</version>
+<version>1.0.0-SNAPSHOT</version>
 ...
  ```
 
@@ -112,19 +112,13 @@ mvn package
 ### Step 4: Installation the plugin on OpenSearch
 
 ```sh
-bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-7.10.3-SNAPSHOT.zip
+bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-1.0.0-SNAPSHOT.zip
 ```
 
 ## Compatible Versions
-
-From version 7.12.11, the plugin uses CocCoc C++ tokenizer instead of the VnTokenizer library (by Lê Hồng Phương),
-I won't maintain the plugin with the VnTokenizer anymore. If you want to continue developing with it, you can check branch [vntokenizer](https://github.com/duydo/opensearch-analysis-vietnamese/tree/vntokenizer).  
-
-If you want to use the plugin with prior versions of OpenSearch, you can build the plugin yourself with above guide. 
-
 | Vietnamese Analysis Plugin | OpenSearch      |
 | -------------------------- | --------------- |
-| master                     | 7.10.3-SNAPSHOT |
+| master                     | 1.0.0-SNAPSHOT |
 
 ## Thanks to
 - [JetBrains](https://www.jetbrains.com) has provided a free license for [IntelliJ IDEA](https://www.jetbrains.com/idea).
