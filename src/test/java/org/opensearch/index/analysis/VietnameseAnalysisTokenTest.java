@@ -1,8 +1,8 @@
-package org.elasticsearch.index.analysis;
+package org.opensearch.index.analysis;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.elasticsearch.test.ESTestCase;
+import org.opensearch.test.ESTestCase;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;

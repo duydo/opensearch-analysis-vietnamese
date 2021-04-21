@@ -17,7 +17,7 @@ import com.coccoc.Token;
 import com.coccoc.Tokenizer;
 import com.coccoc.Tokenizer.TokenizeOption;
 import com.google.common.io.CharStreams;
-import org.elasticsearch.analysis.VietnameseConfig;
+import org.opensearch.analysis.VietnameseConfig;
 
 import java.io.IOException;
 import java.io.Reader;
