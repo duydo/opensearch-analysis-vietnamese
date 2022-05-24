@@ -75,17 +75,7 @@ make install
 
 Refer [the repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
 
-### Step 2: Build OpenSearch
-
-```sh
-git clone https://github.com/opensearch-project/OpenSearch.git
-cd OpenSearch
-./gradlew publishToMavenLocal
-```
-Refer the documentation for more details: https://github.com/opensearch-project/opensearch-plugins  
-NOTE: Once OpenSearch is published to public repositories, this step will not be needed.
-
-### Step 3: Build the plugin
+### Step 2: Build the plugin
 
 Clone the plugin’s source code:
 
@@ -93,13 +83,13 @@ Clone the plugin’s source code:
 git clone https://github.com/duydo/opensearch-analysis-vietnamese.git
 ```
 
-Edit the `opensearch-analysis-vietnamese/pom.xml` to change the version of OpenSearch (same as plugin version) you want to build the plugin with:
+Optionally, edit the `opensearch-analysis-vietnamese/pom.xml` to change the version of OpenSearch (same as plugin version) you want to build the plugin with:
 
 ```xml
 ...
 <groupId>org.opensearch</groupId>
 <artifactId>opensearch-analysis-vietnamese</artifactId>
-<version>1.0.0-SNAPSHOT</version>
+<version>1.3.2</version>
 ...
  ```
 
@@ -109,16 +99,16 @@ cd opensearch-analysis-vietnamese
 mvn package
 ```
 
-### Step 4: Installation the plugin on OpenSearch
+### Step 3: Installation the plugin on OpenSearch
 
 ```sh
-bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-1.0.0-SNAPSHOT.zip
+bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-1.3.2.zip
 ```
 
 ## Compatible Versions
-| Vietnamese Analysis Plugin | OpenSearch      |
-| -------------------------- | --------------- |
-| master                     | 1.0.0-SNAPSHOT |
+| Vietnamese Analysis Plugin | OpenSearch |
+| -------------------------- |------------|
+| master                     | 1.3.2      |
 
 ## Thanks to
 - [JetBrains](https://www.jetbrains.com) has provided a free license for [IntelliJ IDEA](https://www.jetbrains.com/idea).
