@@ -30,6 +30,8 @@ jobs:
           java-version: ${{ matrix.entry.version }}
           distribution: ${{ matrix.entry.distribution }}
           cache: maven
+      - name: Patch Dict Location
+        run: sed -i 's/usr\/local/home\/runner\/.local/g' ./src/test/resources/org/opensearch/index/analysis/vi_analysis.json 
       - name: Build and Test
         env:
           LD_LIBRARY_PATH: /home/runner/.local/lib
