@@ -10,7 +10,7 @@ import org.opensearch.index.query.QueryBuilders;
 import org.opensearch.plugin.analysis.vi.AnalysisVietnamesePlugin;
 import org.opensearch.plugins.Plugin;
 import org.opensearch.plugins.PluginInfo;
-import org.opensearch.test.ESIntegTestCase;
+import org.opensearch.test.OpenSearchIntegTestCase;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.notNullValue;
 /**
  * Created by duydo on 2/20/17.
  */
-public class VietnameseAnalysisIntegrationTests extends ESIntegTestCase {
+public class VietnameseAnalysisIntegrationTests extends OpenSearchIntegTestCase {
     @Override
     protected Collection<Class<? extends Plugin>> nodePlugins() {
         return Collections.singleton(AnalysisVietnamesePlugin.class);

@@ -73,7 +73,7 @@ cmake -DBUILD_JAVA=1 ..
 make install
 ```
 
-Check their [repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
+Refer [the repo](https://github.com/coccoc/coccoc-tokenizer) for more information to build the library.
 
 ### Step 2: Build the plugin
 
@@ -83,13 +83,13 @@ Clone the plugin’s source code:
 git clone https://github.com/duydo/opensearch-analysis-vietnamese.git
 ```
 
-Edit the `opensearch-analysis-vietnamese/pom.xml` to change the version of OpenSearch (same as plugin version) you want to build the plugin with:
+Optionally, edit the `opensearch-analysis-vietnamese/pom.xml` to change the version of OpenSearch (same as plugin version) you want to build the plugin with:
 
 ```xml
 ...
 <groupId>org.opensearch</groupId>
 <artifactId>opensearch-analysis-vietnamese</artifactId>
-<version>7.10.3-SNAPSHOT</version>
+<version>1.3.2</version>
 ...
  ```
 
@@ -102,19 +102,13 @@ mvn package
 ### Step 3: Installation the plugin on OpenSearch
 
 ```sh
-bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-7.10.3-SNAPSHOT.zip
+bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-1.3.2.zip
 ```
 
 ## Compatible Versions
-
-From version 7.12.11, the plugin uses CocCoc C++ tokenizer instead of the VnTokenizer library (by Lê Hồng Phương),
-I won't maintain the plugin with the VnTokenizer anymore. If you want to continue developing with it, you can check branch [vntokenizer](https://github.com/duydo/opensearch-analysis-vietnamese/tree/vntokenizer).  
-
-If you want to use the plugin with prior versions of OpenSearch, you can build the plugin yourself with above guide. 
-
-| Vietnamese Analysis Plugin | OpenSearch      |
-| -------------------------- | --------------- |
-| master                     | 7.10.3-SNAPSHOT |
+| Vietnamese Analysis Plugin | OpenSearch |
+| -------------------------- |------------|
+| master                     | 1.3.2      |
 
 ## Thanks to
 - [JetBrains](https://www.jetbrains.com) has provided a free license for [IntelliJ IDEA](https://www.jetbrains.com/idea).
