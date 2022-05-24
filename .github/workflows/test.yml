@@ -11,6 +11,8 @@ jobs:
           - { version: 11, distribution: 'adopt' }
           # - { version: 17, distribution: 'adopt' }
     steps:
+      - name: Checkout analysis-vietnamese 
+        uses: actions/checkout@v3
       - name: Check Out coccoc-tokenizer
         uses: actions/checkout@v3
         with:
@@ -20,20 +22,14 @@ jobs:
         working-directory: ./coccoc-tokenizer
         run: |
           mkdir build && cd build
-          cmake -DBUILD_JAVA=1 .. -DCMAKE_INSTALL_PREFIX=~/.local
-          make install
-      - name: Checkout analysis-vietnamese 
-        uses: actions/checkout@v3
+          cmake -DBUILD_JAVA=1 ..
+          sudo make install
       - name: Set up JDK ${{ matrix.entry.version }}
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.entry.version }}
           distribution: ${{ matrix.entry.distribution }}
           cache: maven
-      - name: Patch Dict Location
-        run: sed -i 's/usr\/local/home\/runner\/.local/g' ./src/test/resources/org/opensearch/index/analysis/vi_analysis.json 
       - name: Build and Test
-        env:
-          LD_LIBRARY_PATH: /home/runner/.local/lib
         run: mvn --batch-mode test
  
