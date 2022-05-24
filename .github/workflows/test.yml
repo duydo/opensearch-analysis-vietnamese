@@ -20,7 +20,7 @@ jobs:
         working-directory: ./coccoc-tokenizer
         run: |
           mkdir build && cd build
-          cmake -DBUILD_JAVA=1 .. -DCMAKE_INSTALL_PREFIX=/usr/local
+          cmake -DBUILD_JAVA=1 .. -DCMAKE_INSTALL_PREFIX=~/.local
           make install
       - name: Checkout analysis-vietnamese 
         uses: actions/checkout@v3
@@ -31,5 +31,7 @@ jobs:
           distribution: ${{ matrix.entry.distribution }}
           cache: maven
       - name: Build and Test
+        env:
+          LD_LIBRARY_PATH: /home/runner/.local/lib
         run: mvn --batch-mode test
  
