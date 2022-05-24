@@ -1,5 +1,7 @@
 # Vietnamese Analysis Plugin for OpenSearch
 
+[![Test](https://github.com/duydo/opensearch-analysis-vietnamese/actions/workflows/test.yml/badge.svg)](https://github.com/duydo/opensearch-analysis-vietnamese/actions/workflows/test.yml)
+
 Vietnamese Analysis plugin integrates Vietnamese language analysis into OpenSearch. It uses [C++ tokenizer for Vietnamese](https://github.com/coccoc/coccoc-tokenizer) library developed by
 CocCoc team for their Search Engine and Ads systems.
 
