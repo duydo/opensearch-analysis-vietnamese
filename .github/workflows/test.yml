@@ -9,7 +9,7 @@ jobs:
       matrix:
         entry:
           - { version: 11, distribution: 'adopt' }
-          # - { version: 17, distribution: 'adopt' }
+          - { version: 17, distribution: 'adopt' }
     steps:
       - name: Checkout analysis-vietnamese 
         uses: actions/checkout@v3
