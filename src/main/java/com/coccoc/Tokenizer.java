@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Rewrite class com.coccoc.Tokenizer for Elasticsearch integration.
+ * Rewrite class com.coccoc.Tokenizer for OpenSearch integration.
  *
  * @author duydo, CocCoc team
  */

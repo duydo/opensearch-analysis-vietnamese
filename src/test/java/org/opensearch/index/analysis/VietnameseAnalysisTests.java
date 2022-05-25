@@ -102,7 +102,7 @@ public class VietnameseAnalysisTests extends OpenSearchTestCase {
 
 
     public TestAnalysis createTestAnalysisFromFile() throws IOException {
-        String json = "/org/elasticsearch/index/analysis/vi_analysis.json";
+        String json = "/org/opensearch/index/analysis/vi_analysis.json";
         Settings settings = Settings.builder()
                 .loadFromStream(json, VietnameseAnalysisTests.class.getResourceAsStream(json), true)
                 .build();
