@@ -5,7 +5,7 @@ import org.opensearch.action.admin.cluster.node.info.NodesInfoResponse;
 import org.opensearch.action.admin.cluster.node.info.PluginsAndModules;
 import org.opensearch.action.admin.indices.analyze.AnalyzeAction;
 import org.opensearch.action.search.SearchResponse;
-import org.opensearch.common.xcontent.XContentBuilder;
+import org.opensearch.core.xcontent.XContentBuilder;
 import org.opensearch.index.query.QueryBuilders;
 import org.opensearch.plugin.analysis.vi.AnalysisVietnamesePlugin;
 import org.opensearch.plugins.Plugin;
@@ -71,7 +71,7 @@ public class VietnameseAnalysisIntegrationTests extends OpenSearchIntegTestCase 
                         .endObject()
                     .endObject()
                 .endObject();
-        client().admin().indices().preparePutMapping("test").setType("_doc").setSource(mapping).get();
+        client().admin().indices().preparePutMapping("test").setSource(mapping).get();
         final XContentBuilder source = jsonBuilder()
                 .startObject()
                     .field("foo", "công nghệ thông tin Việt Nam")
