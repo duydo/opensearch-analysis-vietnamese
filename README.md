@@ -91,7 +91,7 @@ Optionally, edit the `opensearch-analysis-vietnamese/pom.xml` to change the vers
 ...
 <groupId>org.opensearch</groupId>
 <artifactId>opensearch-analysis-vietnamese</artifactId>
-<version>1.3.2</version>
+<version>2.9.0</version>
 ...
  ```
 
@@ -104,13 +104,13 @@ mvn package
 ### Step 3: Installation the plugin on OpenSearch
 
 ```sh
-bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-1.3.2.zip
+bin/opensearch-plugin install file://target/releases/opensearch-analysis-vietnamese-2.9.0.zip
 ```
 
 ## Compatible Versions
 | Vietnamese Analysis Plugin | OpenSearch |
 | -------------------------- |------------|
-| master                     | 1.3.2      |
+| master                     | 2.9.0      |
 
 ## Thanks to
 - [JetBrains](https://www.jetbrains.com) has provided a free license for [IntelliJ IDEA](https://www.jetbrains.com/idea).
